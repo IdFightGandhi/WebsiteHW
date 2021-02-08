@@ -9,6 +9,7 @@
 body {
     background-color: darkgrey;
     background-size: cover;
+    justify-content: flex-start;
 }
 header {
     padding: 20px;
@@ -29,71 +30,61 @@ nav ul {
     justify-content: space-between;
     min-width: 300px;
     text-align: right;
-  }
+}
   
-  nav a {
+nav a {
     color: #b9C6ae;
     font-weight: bold;
     text-decoration: none;
-  }
+}
   
-  nav a:hover {
+nav a:hover {
     color: #fff;
-  }
+}
   
-/*Slideshow container*/
-section .slideshow-container {
-    width:600px;
-    height:500px;
-    position: relative;
-    margin: auto;
-}
+main {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2%;
+  }
 
- /*Animation for slideshow*/
- .fade {
-     -webkit-animation: fade;
-     -webkit-animation-duration: 5.0s;
-     animation-name:fade;
-     animation-duration: 5.0s;
-     animation: fade;
- }
-
-@-webkit-keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-}
-@keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-}
 /*Project Cards*/
-.card{
-    flex: 1 0 200px;
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 0 0;
     padding: 10px;
     text-align: center;
     border-style: solid;
     border-width: 1px;
-  
-}
+  }
 
-.bigCard {
-    flex: 1 0 400px;
-    padding: 10px;
-    text-align: center;
-    border-style: solid;
-    border-width: 1px;
-}
-
-.bigCard header {
-    padding:20px;
-    background:#13293d;
+  .work header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 60px;
+    background: #13293d;
     color: #fff;
+  }
+
+.card p {
+    text-align: center;
+  }
+  
+.card img {
+  width: 100%;
+  min-width: 200px;
+  max-width: 300px;
 }
-.card header {
+  
+
+  .card header {
     padding: 20px;
     background: #13293d;
     color: #fff;
   }
+  
 /*Current Projects Section*/
 main {
     display: flex;
@@ -166,3 +157,44 @@ footer h2{
 
 
 }
+
+/*Monke Slideshow container*/
+section .slideshow-container {
+    width:600px;
+    height:500px;
+    position: relative;
+    margin: auto;
+}
+
+ /*Animation for slideshow*/
+ .fade {
+     -webkit-animation: fade;
+     -webkit-animation-duration: 5.0s;
+     animation-name:fade;
+     animation-duration: 5.0s;
+     animation: fade;
+ }
+
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@media screen and (max-width: 768px) {
+    main,
+    nav,article {
+      flex-direction: column;
+    }
+    header {
+      background: #772014;
+    }
+    nav,
+    footer {
+      background-color: #bb8588;
+    }
+
+  }
