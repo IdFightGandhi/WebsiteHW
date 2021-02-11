@@ -6,23 +6,29 @@
     box-sizing: border-box;
 }
 
+.float-left {
+    float:left;
+}
+
+.float-right {
+    float:right;
+}
+
 body {
     background-color: darkgrey;
     background-size: cover;
     justify-content: flex-start;
 }
+
 header {
     padding: 20px;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: #3bccad;
+    background-color:lightslategray;
     color: #ffffff;
-    
 }
 
-header h1 {
-    display: inline-flexbox;
-    font-size: 48px;
-    text-align: center;
+.navbar-wrapper {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 nav ul {
@@ -30,6 +36,7 @@ nav ul {
     justify-content: space-between;
     min-width: 300px;
     text-align: right;
+    font-size: 150%;
 }
   
 nav a {
@@ -43,68 +50,79 @@ nav a:hover {
 }
   
 main {
+    margin-left: 1vw;
+
+}
+
+.smallCard {
     display: flex;
     flex-wrap: wrap;
     margin-top: 2%;
+    flex-direction: row;
+    background-color: whitesmoke;
+   
   }
+
+.smallCard:hover {
+    background-color: #772014;
+    color: #fff;
+  }
+
+.row-work {
+
+    margin-top: 2%;
+    width: 70%;
+    height: 70%;
+}
+
+
+
+.work-header {
+    width: 150px;
+    margin-right: 50px;
+    padding-bottom: 50px;
+    color: whitesmoke;
+    border-right:solid;
+    float: left;
+}
 
 /*Project Cards*/
 .card {
-    display: flex;
+    display:flex;
     flex-wrap: wrap;
     flex: 1 0 0;
     padding: 10px;
     text-align: center;
     border-style: solid;
     border-width: 1px;
+    margin:20px;
+    
   }
 
-  .work header{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 60px;
+button header{
+    width:100%;
+    padding: 10px;
     background: #13293d;
     color: #fff;
   }
+ 
+button img {
+    width:100%
+}  
 
-.card p {
-    text-align: center;
-  }
   
-.card img {
+img {
   width: 100%;
   min-width: 200px;
   max-width: 300px;
 }
-  
 
-  .card header {
-    padding: 20px;
-    background: #13293d;
-    color: #fff;
-  }
-  
-/*Current Projects Section*/
-main {
-    display: flex;
-    text-align: inline-block;
-    justify-content: space space-between;
-    padding: 30px;
-    background:lightslategrey;
-    color: #ffffff;
-
+.bigCard {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
 }
-
-main h1 {
-    display:inline-block;
-    text-align: left;
-    margin-right: 50px;
-    padding-right:85px;
-    color: whitesmoke;
-    border-right:solid;
-    }
-
+/*Current Projects Section*/
 
 
 /*About Me*/
@@ -122,11 +140,14 @@ article {
 article h1{
     display:inline-block;
     justify-content: space space-between;
-    padding-right: 100px;
+    padding-right: 70px;
     color: whitesmoke;
     border-right:solid;
 }
 
+article img {
+    margin-left: 30px;
+}
 article p{
     padding-left: 60px;
 }
@@ -143,7 +164,7 @@ footer{
 footer h1 {
     display:inline-block;
     justify-content: space space-between;
-    padding-right: 60px;
+    padding-right: 25px;
     color: whitesmoke;
     border-right:solid;
     
